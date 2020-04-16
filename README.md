@@ -1,6 +1,11 @@
 # study-on-linux-ipc
 
 # message queue
+- 현재 동작중인 message queue 확인: ipcs -q
+- default max msg queue size: 16
+- sys/msg.h 내, #define MSGMNI 16 을 수정하여 최대 message queue 수 조절
+- key와 msqid가 어떻게 다른지 확인 필요.
+- key를 통해, msqid가 정해지는데, ipcs -q 경우, 둘다 고유하게 가진다면 둘다 있어야 하는 이유는?
 
 # message queue data format
 - 항상 long 타입의 data_type 을 포함해야 함.
